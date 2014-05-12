@@ -1,0 +1,2 @@
+module TextpostsHelper
+end
