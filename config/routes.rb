@@ -1,5 +1,6 @@
 BoxedideasApp::Application.routes.draw do
   resources :textposts
+  root 'textposts#index'
   # get "textposts/index"
   # get "textposts/new"
   # get "textposts/create"
