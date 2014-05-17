@@ -1,2 +1,5 @@
 module IdeasHelper
+
+
+
 end

@@ -1,33 +1,64 @@
 // Place all the styles related to the Ideas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.add_linkcollection{
-	margin: 10px;
-}
-.add_linkcollection:hover{
-	border:1px solid black;
-	width: 260px;
-	height: 75px;
-	margin-left: 10px;
+div {
+	border: 1px dashed red;
 }
 
-.current_linkcollection{
-	text-align: left;
-	padding: 40px;
-	widht: 100%;
-	height: 500px;
-	border: 1px solid black;
+#rightindex {
+	background-color: yellow;
 
-}
-.posttitle{
-	text-align: left;
-	border: 1px solid black;
-	padding: 5px;
-	height: 90px;
-	overflow: hidden;
-	
-	div {
-	display: inline-block;
+	#add_linkcollection{
+		margin: 10px;
+	}
+
+	#add_linkcollection:hover{
+		border:1px solid black;
+		width: 260px;
+		height: 75px;
+		margin-left: 10px;
 	}
 }
+
+#leftindex {
+	background-color: pink;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 700px;
+
+	h2 {
+		font-size: 20px;
+	}
+
+	.date_pub {
+	font-size: 15px;
+	}
+
+	.links {
+		background-color: yellow;
+		
+	}
+}
+
+
+.select_linkcollection{
+	text-align: left;
+	border: 4px solid black;
+	padding: 5px;
+	width: 800px;
+	overflow: hidden;
+	
+	
+
+	.linkcollection{
+		background-color: white;
+		border: 1px solid black;
+
+		div div{
+			display: inline-block;
+		}
+	}
+}
+
+
+
