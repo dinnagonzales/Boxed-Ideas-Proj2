@@ -1,0 +1,18 @@
+<div class="first_page">
+
+<div class="first_loginbox">
+
+	<div class="log_in_box">
+	<%= form_for @user do |f| %>
+	<%= f.text_field :name, :placeholder => "Name" %>&nbsp
+	<%= f.text_field :email, :placeholder => "Email" %>&nbsp
+	<%= f.password_field :password, :placeholder => "Password" %><br><br>
+	  <%= button_to('Create Account', new_sessions_path, :class => 'btn btn-warning btn-mini')  %>
+	<% end %>
+	</div>
+</div>
+
+<div class="second_loginbox">
+</div>
+
+</div>

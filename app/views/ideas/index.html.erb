@@ -1,0 +1,29 @@
+<h1>Hello, <%= current_user.name %>!</h1>
+
+
+<div class="add_linkcollection">
+<%= link_to image_tag("add_idea.png", :size =>"260x75",:border => 0), new_idea_path, :class => "add" %>
+</div>
+
+
+<div class="current_linkcollection">
+<div class="select_linkcollection">
+
+<% @ideas.each do |i| %>
+	<div class="posttitle">
+	
+	<strong> <%= @ideas.count %>.&nbsp<%= i.title %></strong>
+	&nbsp
+	<%= i.published %>
+	<%= link_to 'OPEN ', idea_path(i) %> 
+
+
+	 
+	<div id="editlinks">edit<br><%= link_to image_tag("edit.png", :size =>"40x45",:border => 0), edit_idea_path(i), :class => "add" %></div>
+	<%= link_to ' [ Delete ]', i, method: :delete, data: { confirm: 'Are you sure?' } %>
+	
+	<br><br>
+
+	</div>
+<% end %>
+</div>

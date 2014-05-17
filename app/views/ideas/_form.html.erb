@@ -1,0 +1,16 @@
+
+<%= form_for @idea do |i| %>
+	<%= i.hidden_field :user_id, :value => current_user.id %>
+
+	<div class="field"> Title:<br>
+	<%= i.text_field :title %>
+	</div>
+
+	<div class="field"> Date:<br>
+	<%= i.text_field :published %>
+	</div>
+
+	<div class="field"><br>
+	<%= i.submit %>
+	</div>
+<% end %>

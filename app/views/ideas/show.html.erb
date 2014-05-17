@@ -1,0 +1,37 @@
+<div class="box1">
+<div class="ideatitle"></div>
+
+<div class="col-md-6">
+
+<div class="postbox">
+<br><br>
+
+<% @idea.textposts.each do |tpost| %>
+	<div class="posttitle"><strong><%= tpost.subject %></strong></div>
+	
+	<div class="postbody"><%= image_tag tpost.picture.url %></div>
+	<div class="postbody"><a href="<%= tpost.link %>">Website</a></div>
+	<div class="postbody"><%= simple_format tpost.content %>
+	</div>
+	<div class="postauthor"><br>
+	<strong>Posted by:</strong>
+	 <%= tpost.idea.user.name %><br>
+	 <%= tpost.date %>
+	 <br><br>
+	 <span class="edit_delete">
+	<%= link_to '[ Edit ] ', edit_idea_textpost_path(@idea, tpost) %>          
+	<%= link_to ' [ Delete ]', idea_textpost_path(@idea,tpost), method: :delete, data: { confirm: 'Are you sure?' } %></span>
+	<br><br></div><br>
+<% end %>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+</div>

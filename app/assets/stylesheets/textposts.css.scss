@@ -2,9 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 body {
 	margin: 0px;
-	background-image: url('wood.jpg');
+	background-color: white;
 }
 
 .ideatitle {
@@ -41,10 +42,11 @@ h1 {
 	color:black;
 }
 .postbox{
+	padding: 4px;
 	margin: 0 auto;
 	background-color:rgba(0, 0, 0, 0.5);
 	height: 480px;
-	width: 405px;
+	width: 630px;
 	overflow:scroll;
 	border-top-left-radius:1em;
 	border-top-right-radius:1em;
@@ -54,22 +56,29 @@ h1 {
 	text-align: center;
 	background-color: white;
 	font-size: 20px;
-	width: 405px;
+	width: 630px;
 }
 
 .postbody{
 	background-color: white;
-	width: 405px;
+	width: 630px;
 	padding: 8px;
 	box-sizing: border-box;
 	ms-box-sizing: border-box;
 	webkit-box-sizing: border-box;
 	moz-box-sizing: border-box;
+
+	img {
+	max-width:600px;
+	}
+
+
+
 }
 
 .postauthor{
 	background-color: white;
-	width: 405px;
+	width: 630px;
 }
 .edit_delete a{
 	text-align: center;

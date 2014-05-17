@@ -1,0 +1,33 @@
+// Place all the styles related to the Ideas controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.add_linkcollection{
+	margin: 10px;
+}
+.add_linkcollection:hover{
+	border:1px solid black;
+	width: 260px;
+	height: 75px;
+	margin-left: 10px;
+}
+
+.current_linkcollection{
+	text-align: left;
+	padding: 40px;
+	widht: 100%;
+	height: 500px;
+	border: 1px solid black;
+
+}
+.posttitle{
+	text-align: left;
+	border: 1px solid black;
+	padding: 5px;
+	height: 90px;
+	overflow: hidden;
+	
+	div {
+	display: inline-block;
+	}
+}

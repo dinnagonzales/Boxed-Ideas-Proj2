@@ -4,8 +4,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.4'
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'genghis', '~>1.4.1'
-gem 'paperclip', '~> 4.1.1'
+gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
 gem 'rails_12factor'
+gem 'bcrypt-ruby','~>3.1.2'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'

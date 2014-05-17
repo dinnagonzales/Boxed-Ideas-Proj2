@@ -1,6 +1,12 @@
 BoxedideasApp::Application.routes.draw do
-  resources :textposts
-  root 'textposts#index'
+  resource :sessions, only: [:new, :create, :destroy]
+  resources :users, only: [:new, :create]
+
+  resources :ideas do 
+    resources :textposts
+  end
+  
+  root 'users#new'
   # get "textposts/index"
   # get "textposts/new"
   # get "textposts/create"

@@ -14,3 +14,19 @@
  
  @import "bootstrap";
 
+body{
+	font-family: 'Quicksand', sans-serif;
+	color: black;
+	padding-top: 70px; 
+}
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border: 0 !important;
+   box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+.navbar li { 
+color: #000 
+} 

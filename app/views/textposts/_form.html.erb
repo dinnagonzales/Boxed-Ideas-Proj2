@@ -1,8 +1,16 @@
 
-<%= form_for(@textpost) do |f| %>
+<%= form_for [@idea,@textpost], :html => { :multipart => true } do |f| %>
+
+	<%= f.hidden_field :user_id, :value => current_user.id %>
+	<%= f.hidden_field :date, :value => Date.today%>
+	<div class="field"><%= f.file_field :picture %>
 
 	<div class="field"> Title:<br>
 	<%= f.text_field :subject %>
+	</div>
+
+	<div class="field"> Website:<br>
+	<%= f.text_field :link %>
 	</div>
 
 	<div class="field"> Body:<br>
@@ -10,7 +18,7 @@
 	</div>
 
 	<div class="field"> Submitted By:<br>
-	<%= f.text_field :user %>
+	<%= @idea.user.name %>
 	</div>
 
 
