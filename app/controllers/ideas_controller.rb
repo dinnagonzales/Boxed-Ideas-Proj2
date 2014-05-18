@@ -19,7 +19,7 @@ class IdeasController < ApplicationController
   end
 
   def create
-    @idea = Idea.new(params.require(:idea).permit(:title, :published, :user_id ))
+    @idea = Idea.new(params.require(:idea).permit(:title, :published, :user_id, :description ))
         
     if @idea.save
       redirect_to ideas_path
@@ -31,7 +31,7 @@ class IdeasController < ApplicationController
 
   def update
     @Idea = Idea.find(params[:id])
-    if @Idea.update_attributes(params.require(:idea).permit(:title, :published, :user_id ))
+    if @Idea.update_attributes(params.require(:idea).permit(:title, :published, :user_id, :description))
       redirect_to ideas_path
     else
       render 'edit'

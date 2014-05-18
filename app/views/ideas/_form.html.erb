@@ -1,16 +1,18 @@
 
 <%= form_for @idea do |i| %>
 	<%= i.hidden_field :user_id, :value => current_user.id %>
+	<%= i.hidden_field :published, :value => Date.today%>
 
 	<div class="field"> Title:<br>
-	<%= i.text_field :title %>
+	<%= i.text_field :title,  :size => "30x4", :maxlength => 40 , :placeholder => "40 characters only." %>
 	</div>
 
-	<div class="field"> Date:<br>
-	<%= i.text_field :published %>
+	<div class="field"> Description:<br>
+	<%= i.text_area :description, :size => "30x4", :maxlength => 100 , :placeholder => "100 characters only." %>
 	</div>
 
 	<div class="field"><br>
 	<%= i.submit %>
 	</div>
 <% end %>
+
