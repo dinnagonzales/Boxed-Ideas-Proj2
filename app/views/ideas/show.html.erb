@@ -1,19 +1,29 @@
-<div class="col-md-2">
+<div class="col-md-4">
 <div class="ideatitle">
 	<div class="mainidea_title"><h1><%= @idea.title %></h1></div><br /><br />
-	<div class="add_link"><%= link_to image_tag('newlink.png'), new_idea_textpost_path(@idea) %></div>
-	<div class="backhome"><%= link_to image_tag('home.png'), ideas_path %></div>
+	<div class="linkdiv" id="backhome"><%= link_to image_tag('home.png', :size => "82x80") , ideas_path %></div>
+	<div  class="linkdiv" id="add_link"><%= link_to image_tag('newlink.png', :size => "92x84"), new_idea_textpost_path(@idea) %></div>
+	<div id="contents">
+		<strong>Contents:</strong><br>
+		<% @idea.textposts.each do |t| %>
+		
+		-<span><%= t.subject %> </span><br>
+		
+		<% end %>
+
+	</div>
+	
 </div>
 </div>
 
-	<div class="col-md-10">
+	<div class="col-md-8">
 		<div class="postbox">
 		<br><br>
 
 		<% @idea.textposts.each do |tpost| %>
 			<div class="posttitle"><strong><%= tpost.subject %></strong></div>
 			
-			<div class="postbody" id="linkcollectiontitle"><div id="roundbutton"><a href="<%= tpost.link %>">Click here to rederict to website!</a></div></div>
+			<div class="postbody" id="linkcollectiontitle"><div id="roundbutton"><a href="<%= tpost.link %>">Click here to redirect to website!</a></div></div>
 			<% if tpost.picture.file? %>
 			<div class="postbody"><%= image_tag tpost.picture.url %></div>
 			<% end %>

@@ -19,10 +19,25 @@ body {
 		font-size: 30px;
 	}
 	
+	.linkdiv{
+		display: inline-block;
+	}
 	.mainidea_title{
 		background-color: transparent;
 	}
 
+	.add_link	{
+		width: 75px;
+		height: auto;
+	}
+	#contents{
+		text-align: left;
+		background-color: white;
+		margin-top: 40px;
+		border: 1px solid black;
+		border-radius: 10px;
+		padding: 10px;
+	}
 }
 
 
@@ -67,13 +82,13 @@ h1 {
 	padding: 25px;
 	background-color: white;
 	font-size: 30px;
-	width: 1000px;
+	width: 800px;
 
 }
 
 .postbody{
 	background-color: white;
-	width: 1000px;
+	width: 800px;
 	padding: 25px;
 	box-sizing: border-box;
 	ms-box-sizing: border-box;
@@ -82,7 +97,7 @@ h1 {
 
 	img {
 	margin: 0 auto;
-	max-width: 950px;
+	max-width: 750px;
 	}
 
 
@@ -92,7 +107,7 @@ h1 {
 .postauthor{
 	padding: 25px;
 	background-color: white;
-	width: 1000px;
+	width: 800px;
 }
 .edit_delete a{
 	text-align: center;

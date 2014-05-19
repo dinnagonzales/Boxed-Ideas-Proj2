@@ -1,3 +1,13 @@
+	<% if @ideas.count ==0 %>
+
+	<div class="start">Start <br>here!</div>
+		<% end %>
+
+
+
+
+
+
 <div class="user">
 <%= image_tag 'logo.png', :class =>"logo" %><br>
 <h1>Hello, <%= current_user.name %>!</h1>
@@ -13,6 +23,8 @@
 	<% @ideas.each do |i| %>
 	<ul>
 		<li><%= i.title %></li>
+		<%= i.published %>
+
 	</ul>
 	<%end%>
 	</div>

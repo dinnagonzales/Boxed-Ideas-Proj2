@@ -4,6 +4,20 @@
 .logo {
 	width: 200px;
 }
+ 
+.start{
+	background-image: url('start.png');
+	background-size: cover;
+	text-align: center;
+	width: 160px;
+	height: 106px;
+	position: fixed;
+	top: 135px;
+	left: 215px;
+	font-size: 20px;
+	padding-top: 15px;
+}
+
 .user {
 	
 	text-align: center;
@@ -26,15 +40,17 @@
 	}
 
 	#titleoflinks{
+		background-color: white;
 		border: 1px solid black;
 		border-radius: 10px;
 		padding: 15px;
-		text-align: right;
+		text-align: left;
 		position: relative;
 		top: 80px;
-		left: 250px;
+		left: 260px;
 		margin: 10px;
 		float: right;
+		font-size: 17px;
 	}
 }
 
