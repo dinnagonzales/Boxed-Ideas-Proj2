@@ -17,7 +17,7 @@
 body{
 	font-family: 'Quicksand', sans-serif;
 	color: black;
-	
+	padding-top: 55px;
 	background-image: url('lines.png');
 }
 
@@ -25,13 +25,13 @@ div{
 	background-color: transparent;
 }
 .navbar {
-   background-color: transparent;
-   background: transparent;
+   background-color: rgba(0,0,0,0.9);
    border: 0 !important;
    box-shadow: none !important;
   -webkit-box-shadow: none !important;
+  color: white;
 }
 
 .navbar li { 
-color: #000 
+color: white;
 } 
