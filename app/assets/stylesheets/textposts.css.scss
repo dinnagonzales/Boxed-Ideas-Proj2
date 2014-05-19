@@ -8,33 +8,33 @@ body {
 	background-color: white;
 }
 
+
 .ideatitle {
 	width: 100%;
 	height: 180px;
-	background-color:rgba(0, 0, 0, 0.5);
+	
+	text-align: center;
+
+	h1 {
+		font-size: 30px;
+	}
+	
+	.addlink{
+	
+	}
 }
 
-/* SCROLL BAR */
-::-webkit-scrollbar {
-    width: 12px;
+
+#linkcollectiontitle{
+	font-color: #E9967A;
+	text-align: center;
 }
-/* Track */
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+
+#roundbutton{
+	border: 1px solid black;
+	border-radius: 10px;
+	width: 400px;
 }
-/* Handle */
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: rgba(0,0,0,0.8); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-}
-::-webkit-scrollbar-thumb:window-inactive {
-	background: rgba(0,0,0,0.4); 
-}
-/* END OF SCROLL BAR */
 
 h1 {
 	text-align: center;
@@ -45,31 +45,44 @@ h1 {
 	padding: 4px;
 	margin: 0 auto;
 	background-color:rgba(0, 0, 0, 0.5);
-	height: 480px;
-	width: 630px;
+	height: 720px;
 	overflow:scroll;
 	border-top-left-radius:1em;
 	border-top-right-radius:1em;
+
+	div {
+		margin: 0 auto;
+	}
+}
+.col-md-12 {
+	padding: 0px;
+}
+
+.post-box{
+	padding: 0px;
 }
 
 .posttitle{
 	text-align: center;
+	padding: 25px;
 	background-color: white;
-	font-size: 20px;
-	width: 630px;
+	font-size: 30px;
+	width: 1000px;
+
 }
 
 .postbody{
 	background-color: white;
-	width: 630px;
-	padding: 8px;
+	width: 1000px;
+	padding: 25px;
 	box-sizing: border-box;
 	ms-box-sizing: border-box;
 	webkit-box-sizing: border-box;
 	moz-box-sizing: border-box;
 
 	img {
-	max-width:600px;
+	margin: 0 auto;
+	max-width: 950px;
 	}
 
 
@@ -77,8 +90,9 @@ h1 {
 }
 
 .postauthor{
+	padding: 25px;
 	background-color: white;
-	width: 630px;
+	width: 1000px;
 }
 .edit_delete a{
 	text-align: center;

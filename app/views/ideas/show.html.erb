@@ -1,31 +1,39 @@
-<div class="box1">
-<div class="ideatitle"></div>
-
-<div class="col-md-6">
-
-<div class="postbox">
-<br><br>
-
-<% @idea.textposts.each do |tpost| %>
-	<div class="posttitle"><strong><%= tpost.subject %></strong></div>
-	
-	<div class="postbody"><%= image_tag tpost.picture.url %></div>
-	<div class="postbody"><a href="<%= tpost.link %>">Website</a></div>
-	<div class="postbody"><%= simple_format tpost.content %>
-	</div>
-	<div class="postauthor"><br>
-	<strong>Posted by:</strong>
-	 <%= tpost.idea.user.name %><br>
-	 <%= tpost.date %>
-	 <br><br>
-	 <span class="edit_delete">
-	<%= link_to '[ Edit ] ', edit_idea_textpost_path(@idea, tpost) %>          
-	<%= link_to ' [ Delete ]', idea_textpost_path(@idea,tpost), method: :delete, data: { confirm: 'Are you sure?' } %></span>
-	<br><br></div><br>
-<% end %>
+<div class="col-md-2">
+<div class="ideatitle">
+	<div class="mainidea_title"><h1><%= @idea.title %></h1></div><br /><br />
+	<div class="add_link"><%= link_to image_tag('newlink.png'), new_idea_textpost_path(@idea) %></div>
+	<div class="backhome"><%= link_to image_tag('home.png'), ideas_path %></div>
 </div>
 </div>
 
+	<div class="col-md-10">
+		<div class="postbox">
+		<br><br>
+
+		<% @idea.textposts.each do |tpost| %>
+			<div class="posttitle"><strong><%= tpost.subject %></strong></div>
+			
+			<div class="postbody" id="linkcollectiontitle"><div id="roundbutton"><a href="<%= tpost.link %>">Click here to rederict to website!</a></div></div>
+			<% if tpost.picture.file? %>
+			<div class="postbody"><%= image_tag tpost.picture.url %></div>
+			<% end %>
+
+			<div class="postbody"><%= simple_format tpost.content %>
+			</div>
+			<div class="postauthor"><br>
+			<strong>Posted by:</strong>
+			 <%= tpost.idea.user.name %><br>
+			 <%= tpost.date %>
+			 <br><br>
+			 <span class="edit_delete">
+			<%= link_to '[ Edit ] ', edit_idea_textpost_path(@idea, tpost) %>          
+			<%= link_to ' [ Delete ]', idea_textpost_path(@idea,tpost), method: :delete, data: { confirm: 'Are you sure?' } %></span>
+		
+		<br><br></div><br>
+		<% end %>
+		</div>
+
+	</div> <!-- end of col-md-12 -->
 
 
 
@@ -33,5 +41,5 @@
 
 
 
-</div>
+
 </div>
