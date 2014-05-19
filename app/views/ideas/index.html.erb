@@ -3,14 +3,23 @@
 <h1>Hello, <%= current_user.name %>!</h1>
 
 </div>
+
 <div class="col-md-6" id="rightindex">
 	<div id="add_linkcollection">
 		<%= link_to image_tag("add_idea.png", :size =>"260x75",:border => 0), new_idea_path, :class => "add" %>
 	</div>
+	<div id="titleoflinks">
+	<span><strong>Current Link Collections:</strong></span>
+	<% @ideas.each do |i| %>
+	<ul>
+		<li><%= i.title %></li>
+	</ul>
+	<%end%>
+	</div>
 </div><!-- END of #rightindex -->
 
 
-<div class="col-md-6" id="leftindex">
+<div class="col-s-6 col-md-6 col-lg-6"  id="leftindex">
 
 	<h2>&nbsp&nbsp <!-- Left index title. Link Collection count display. -->
 		<% if @ideas.count ==0 %>
@@ -26,9 +35,10 @@
 
 		<div class="linkcollection">
 		<% @ideas.each do |i| %>	
-
 		<div class="thislinkcollection">
+
 		<div class="title_date">
+	
 			<span class="linkcoll_title"><strong> <%= i.title %> </strong><br>
 			<div class="description"><%= i.description%></div>
 			</span><br /><br />
@@ -41,10 +51,10 @@
 				<%= link_to ' [ Delete ]', i, method: :delete, data: { confirm: 'Are you sure?' } %></div>
 			</div> <!-- End of Edit, Open, Delete Links -->
 		</div>
-		<br>
+		<br><br>
 		<% end %>
-		</div>
 		
+		</div>
 		
 	</div> <!-- End of .select_linkcollection -->
 

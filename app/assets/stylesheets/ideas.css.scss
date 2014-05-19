@@ -10,7 +10,7 @@
 }
 
 #rightindex {
-	background-color: yellow;
+	
 
 	#add_linkcollection{
 		margin: 10px;
@@ -19,14 +19,27 @@
 
 	#add_linkcollection:hover{
 		border:1px solid black;
+		border-radius: 10px;
 		width: 260px;
 		height: 75px;
 		margin-left: 10px;
 	}
+
+	#titleoflinks{
+		border: 1px solid black;
+		border-radius: 10px;
+		padding: 15px;
+		text-align: right;
+		position: relative;
+		top: 80px;
+		left: 250px;
+		margin: 10px;
+		float: right;
+	}
 }
 
 #leftindex {
-	background-color: pink;
+	
 	overflow-y: auto;
 	overflow-x: hidden;
 	height: 530px;
@@ -56,6 +69,16 @@
 	padding: 5px;
 	width: 800px;
 
+	.pushpin {
+		width:50px;
+		height: 50px;
+		background-color: green;
+	/*	background-image: url('push-pin-vector.png');
+		background-size: cover;*/
+	}
+
+
+
 	.linkcollection{
 		padding: 5px;
 		overflow: visible;
@@ -63,7 +86,9 @@
 
 	.thislinkcollection{
 		padding: 10px;
+		background-color: white;
 		border: 1px solid black;
+		border-radius: 10px;
 		width: 600px;
 	}
 		div div{

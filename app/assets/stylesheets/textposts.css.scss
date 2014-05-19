@@ -19,9 +19,10 @@ body {
 		font-size: 30px;
 	}
 	
-	.addlink{
-	
+	.mainidea_title{
+		background-color: transparent;
 	}
+
 }
 
 
@@ -42,9 +43,8 @@ h1 {
 	color:black;
 }
 .postbox{
-	padding: 4px;
 	margin: 0 auto;
-	background-color:rgba(0, 0, 0, 0.5);
+	background-color:rgba(0, 0, 0, 0.1);
 	height: 720px;
 	overflow:scroll;
 	border-top-left-radius:1em;
@@ -107,4 +107,12 @@ h1 {
 
 .editbody {
 	text-align: center;
+}
+
+.postphoto{	
+	width:300px;
+	margin: 0 auto;
+	position: relative;
+	left: 50px;
+
 }
