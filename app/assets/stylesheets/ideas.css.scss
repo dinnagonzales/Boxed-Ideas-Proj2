@@ -1,6 +1,7 @@
 // Place all the styles related to the Ideas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .logo {
 	width: 200px;
 }
@@ -19,12 +20,10 @@
 }
 
 .user {
-	
 	text-align: center;
 }
 
 #rightindex {
-	
 
 	#add_linkcollection{
 		margin: 10px;
@@ -41,18 +40,21 @@
 
 	#titleoflinks{
 		width: 400px;
+		height: 400px;
+		overflow-y: auto;
+		overflow-x: hidden;
 		background-color: white;
 		border: 1px solid black;
 		border-radius: 10px;
 		padding: 15px;
 		text-align: left;
 		position: relative;
-		
-		
 		margin: 10px;
 		float: right;
 		font-size: 17px;
+
 	}
+
 }
 
 #leftindex {
@@ -85,15 +87,6 @@
 	text-align: left;
 	padding: 5px;
 	width: 800px;
-
-	.pushpin {
-		width:50px;
-		height: 50px;
-		background-color: green;
-	/*	background-image: url('push-pin-vector.png');
-		background-size: cover;*/
-	}
-
 
 
 	.linkcollection{

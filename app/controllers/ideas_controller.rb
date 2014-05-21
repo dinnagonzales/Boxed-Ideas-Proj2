@@ -19,15 +19,13 @@ class IdeasController < ApplicationController
   end
 
   def create
-    @idea = Idea.new(params.require(:idea).permit(:title, :published, :user_id, :description ))
-        
+    @idea = Idea.new(params.require(:idea).permit(:title, :published, :user_id, :description ))  
     if @idea.save
       redirect_to ideas_path
     else
       render 'new'
     end
   end
-
 
   def update
     @Idea = Idea.find(params[:id])
@@ -43,7 +41,6 @@ class IdeasController < ApplicationController
     Textpost.where(idea_id: @idea.id).destroy
     @idea.destroy
     redirect_to ideas_path
-
-
   end
+
 end

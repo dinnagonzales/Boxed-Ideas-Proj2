@@ -1,23 +1,22 @@
-	<% if @ideas.count ==0 %>
-
-	<div class="start">Start <br>here!</div>
+	<!-- For when users are new to the site, they see a start here div! -->
+		<% if @ideas.count ==0 %>
+		<div class="start">Start <br>here!</div>
 		<% end %>
-
-
-
-
+	<!-- end of start here div -->
 
 
 <div class="user">
-<%= image_tag 'logo.png', :class =>"logo" %><br>
-<h1>Hello, <%= current_user.name %>!</h1>
-
+	<%= image_tag 'logo.png', :class =>"logo" %><br>
+	<h1>Hello, <%= current_user.name %>!</h1>
 </div>
+
+
 
 <div class="col-md-6" id="rightindex">
 	<div id="add_linkcollection">
 		<%= link_to image_tag("add_idea.png", :size =>"260x75",:border => 0), new_idea_path, :class => "add" %>
 	</div>
+
 	<div id="titleoflinks">
 	<span><strong>Current Link Collections:</strong></span>
 	<% @ideas.each do |i| %>
@@ -41,32 +40,30 @@
 		<% else %>
 			<%= "You have " "#{@ideas.count}" + " Link Collections:" %>
 		<% end %>
-	</h2> <!-- End of left index title -->
+	</h2> <!-- End of left index title. -->
 
 	<div class="all_linkcollection">	
 
 		<div class="linkcollection">
 		<% @ideas.each do |i| %>	
-		<div class="thislinkcollection">
+			<div class="thislinkcollection">
 
-		<div class="title_date">
-	
-			<span class="linkcoll_title"><strong> <%= i.title %> </strong><br>
-			<div class="description"><%= i.description%></div>
-			</span><br /><br />
-			<span class="date_pub">Date Created: <%= i.published %>&nbsp&nbsp</span><br>
-		</div>
+				<div class="title_date">
+					<span class="linkcoll_title"><strong> <%= i.title %> </strong><br>
+					<div class="description"><%= i.description%></div>
+					</span><br /><br />
+					<span class="date_pub">Date Created: <%= i.published %>&nbsp&nbsp</span><br>
+				</div>
 			<div class="links"> <!-- Edit, Open, Delete Links -->
 				<div id="editlinks"> edit title<br><%= link_to image_tag("edit.png", :size =>"32x36",:border => 0), edit_idea_path(i), :class => "add" %></div>&nbsp&nbsp
 				<div id="editlinks">open<br><%= link_to image_tag("open.png", :size =>"32x36",:border => 0), idea_path(i), :class => "add" %></div>&nbsp&nbsp
 				<div id="editlinks">
-				<%= link_to ' [ Delete ]', i, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-			</div> <!-- End of Edit, Open, Delete Links -->
-		</div>
+					<%= link_to ' [ Delete ]', i, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+				</div> <!-- End of Edit, Open, Delete Links -->
+			</div>
 		<br><br>
 		<% end %>
-		
-		</div>
+		</div> <!-- End of .linkcollection -->
 		
 	</div> <!-- End of .select_linkcollection -->
 

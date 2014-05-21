@@ -15,23 +15,18 @@
  @import "bootstrap";
 
 body{
+	background-image: url('lines.png');
 	font-family: 'Quicksand', sans-serif;
 	color: black;
-	padding-top: 55px;
-	background-image: url('lines.png');
+	padding-top: 55px;  					/*NAV BAR space*/
 }
 
-div{
-	background-color: transparent;
-}
+
 .navbar {
    background-color: rgba(0,0,0,0.9);
-   border: 0 !important;
-   box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  color: white;
+  
+  a {
+  	color:white;
+  }
 }
 
-.navbar li { 
-color: white;
-} 

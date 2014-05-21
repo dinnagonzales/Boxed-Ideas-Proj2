@@ -15,7 +15,6 @@ class TextpostsController < ApplicationController
     @textpost = Textpost.new 
   end
 
-
   def create
     @textpost = @idea.textposts.new(params.require(:textpost).permit(:subject, :date, :link, :content, :user, :picture ))
         

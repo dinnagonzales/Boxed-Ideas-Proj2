@@ -4,15 +4,15 @@
 	<%= i.hidden_field :published, :value => Date.today%>
 
 	<div class="field"> Title:<br>
-	<%= i.text_field :title,  :size => "30x4", :maxlength => 40 , :placeholder => "40 characters only." %>
+		<%= i.text_field :title,  :size => "30x4", :maxlength => 40 , :placeholder => "40 characters only." %>
 	</div>
 
 	<div class="field"> Description:<br>
-	<%= i.text_area :description, :size => "30x4", :maxlength => 100 , :placeholder => "100 characters only." %>
+		<%= i.text_area :description, :size => "30x4", :maxlength => 100 , :placeholder => "100 characters only." %>
 	</div>
 
 	<div class="field"><br>
-	<%= i.submit %>
+		<%= i.submit "Create" %>
 	</div>
 <% end %>
 
