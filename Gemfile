@@ -8,6 +8,7 @@ gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
 gem 'rails_12factor'
 gem 'bcrypt-ruby','~>3.1.2'
 gem 'aws-sdk', '~> 1.3.4'
+gem 'figaro'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
